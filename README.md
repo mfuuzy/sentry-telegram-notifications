@@ -1,7 +1,7 @@
 # Sentry 告警通知
-sentry 告警通知到telegram到插件不维护了，所以自己写了个简单到，原理就是读取 sentry 的 json 格式数据，发送到 telegram.
+sentry 告警通知到 telegram 的插件不维护了，所以自己写了个。原理是读取 sentry 的 json 格式告警数据，发送到 telegram.
 ## telegram token 申请
-省略
+省略，可自行寻找方法
 ## 启动
 ### 方法1:直接运行
 **安装依赖**
