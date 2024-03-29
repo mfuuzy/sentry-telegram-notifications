@@ -20,9 +20,9 @@ def webhook():
         # print(message.get('data').get('metric_alert').get('projects'))
         response = requests.post(apiURL, data={'chat_id': chatID,
                                                'text': f"<b>Sentry Alert</b> 🔥\n\nAction: {message.get('action')}\n"
-                                                       f"Project: {message.get('data').get('metric_alert').get('projects')}"
-                                                       f"\nMessage: {message.get('data').get('description_text')}"
-                                                       f"\nUrl: {message.get('data').get('web_url')}",
+                                                       f"Project: {message.get('data').get('event').get('project')}"
+                                                       f"\nMessage: {message.get('data').get('event').get('message')}"
+                                                       f"\nUrl: {message.get('data').get('event').get('web_url')}",
                                                'parse_mode': 'html'})
 
         # print(f'Telegram response - {response.text}')
